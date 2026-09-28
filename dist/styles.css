@@ -102,3 +102,12 @@ a:hover>.arrow-icon,a:focus-visible>.arrow-icon,button:hover>.arrow-icon,button:
 .whatsapp-button,.mobile-whatsapp-bar a{background:#25D366;color:var(--ink);border:1px solid #10293166;box-shadow:0 1px 0 #1029311f;transition:background-color .18s ease,border-color .18s ease,box-shadow .18s ease}
 .whatsapp-button:hover,.mobile-whatsapp-bar a:hover{background:#20bd5b;border-color:var(--ink);box-shadow:0 2px 0 #10293133}
 .whatsapp-button:focus-visible,.mobile-whatsapp-bar a:focus-visible{background:#25D366;border-color:var(--ink);outline-color:var(--ink)}
+
+/* Contenuto introduttivo specifico per il formato mobile. */
+.hero-lead-mobile{display:none}
+@media(max-width:640px){
+  .hero-lead-desktop{display:none}
+  .hero-lead-mobile{display:block}
+  .hero-actions .button-accent{display:none}
+  .hero-actions{gap:0}
+}
