@@ -9,3 +9,78 @@
   .mobile-whatsapp-bar a{display:flex;align-items:center;justify-content:center;gap:18px;width:100%;min-height:52px;padding:13px 20px;background:var(--accent);color:var(--ink);font-size:15px;font-weight:800}
   body.keyboard-open .mobile-whatsapp-bar{transform:translateY(110%);visibility:hidden}
 }
+
+/* Mirata rifinitura di gerarchia, ritmo e accessibilita */
+html{scroll-padding-top:24px}
+:where(a,button,input,textarea):focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.site-header{gap:30px}
+.header-cta{display:inline-flex;align-items:center;justify-content:space-between;min-height:46px}
+.section{padding-top:104px;padding-bottom:104px}
+.eyebrow{margin-bottom:24px;font-size:13px}
+.intro-main>p{margin-bottom:42px}
+.services-top{margin-bottom:48px}
+.service-card{min-height:275px;padding-top:26px}
+.service-no{display:flex;align-items:center;gap:13px;color:var(--accent);font-family:Manrope,sans-serif;font-size:28px;line-height:1;font-weight:600;letter-spacing:-.04em;margin:20px 0 34px}
+.service-no::after{content:"";display:block;width:34px;height:1px;background:#6d898e}
+.contact-grid{align-items:start;gap:clamp(48px,7vw,105px)}
+.contact-whatsapp{padding-top:12px}
+.form-panel{scroll-margin-top:24px}
+.form-panel h3{margin-bottom:8px}
+.required-note{font-size:12px;color:#667878;margin:0 0 24px}
+.required{color:#668400;font-weight:800}
+label{font-size:14px;margin-bottom:19px}
+input:not([type=checkbox]),textarea{min-height:49px;margin-top:7px}
+.privacy input{width:18px;height:18px;flex:0 0 auto;margin-top:2px}
+.submit-button{display:flex;align-items:center;justify-content:space-between;min-height:52px}
+
+@media(max-width:900px){
+  .section{padding-top:88px;padding-bottom:88px}
+  .hero-content{padding-top:88px;padding-bottom:54px}
+  .contact-grid{grid-template-columns:1fr;gap:48px}
+  .contact-whatsapp{padding-top:0}
+}
+
+@media(max-width:640px){
+  html{scroll-padding-top:16px}
+  .wrap{width:calc(100% - 32px)}
+  .site-header{height:68px;padding:0 16px;gap:10px}
+  .brand{gap:10px}
+  .brand-text{font-size:11px;letter-spacing:.055em}
+  .brand-text small{font-size:9px;letter-spacing:.11em}
+  .header-cta{margin-left:auto;padding:10px 12px;font-size:12px;line-height:1.15}
+  .hero{min-height:min(620px,calc(100svh - 68px))}
+  .hero-content{padding-top:clamp(54px,10vh,76px);padding-bottom:34px}
+  .hero .eyebrow{font-size:11px;letter-spacing:.13em;margin-bottom:20px}
+  h1{font-size:clamp(38px,12.2vw,52px);line-height:1.05;margin-bottom:20px}
+  .hero-lead{font-size:16px;line-height:1.5;margin-bottom:24px;max-width:34rem}
+  .hero-actions{gap:17px}
+  .button{min-height:50px;padding:14px 18px;font-size:14px}
+  .text-link{font-size:14px}
+  .hero-foot{padding-top:13px;padding-bottom:15px;font-size:10px;letter-spacing:.12em}
+  .section{padding-top:68px;padding-bottom:68px}
+  .eyebrow{margin-bottom:19px;font-size:12px;letter-spacing:.15em}
+  .intro h2,.services h2,.about h2,.contact h2{font-size:clamp(38px,10.5vw,50px);margin-bottom:23px}
+  .intro-main>p{margin-bottom:30px}
+  .step-list>div{padding-top:15px}
+  .step-list strong{font-size:16px}
+  .services-top{margin-bottom:24px}
+  .service-card,.service-card+article{padding:24px 0}
+  .service-no{font-size:24px;margin:0 0 20px}
+  .service-card h3{font-size:22px}
+  .about{gap:34px}
+  .about-image{height:min(104vw,380px)}
+  .contact-grid{gap:38px}
+  .form-panel{padding:27px 20px 24px;scroll-margin-top:16px}
+  .form-panel h3{font-size:34px}
+  .submit-button{width:100%;min-height:54px;padding-inline:18px}
+  .footer-top{padding-top:48px;padding-bottom:38px}
+  .footer-bottom{padding-bottom:20px}
+}
+
+@media(max-width:360px){
+  .brand-text small{display:none}
+  .brand-mark{font-size:27px}
+  .header-cta{padding-inline:10px}
+  .header-cta span{display:none}
+  .hero-foot span:first-child{max-width:180px}
+}
