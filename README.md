@@ -36,7 +36,7 @@ Le fotografie attuali sono **immagini campione esterne** e non ritraggono Tommas
 
 ## Contatti: stato attuale
 
-`dist/config.js` contiene `whatsappNumber` e `formspreeEndpoint` vuoti. Il pulsante WhatsApp mostra un avviso e il modulo non invia dati finché non sono configurati. Il proprietario fornirà il numero e creerà l'endpoint Formspree in seguito. Non inserire numeri o endpoint fittizi che possano ricevere messaggi reali.
+`dist/config.js` contiene il numero WhatsApp e il messaggio iniziale condivisi da tutte le CTA. `formspreeEndpoint` resta vuoto e il modulo non invia dati finché non sarà configurato. Il proprietario creerà l'endpoint Formspree in seguito. Non inserire endpoint fittizi che possano ricevere messaggi reali.
 
 Prima di attivare Formspree, aggiungere un'informativa privacy effettiva e collegarla al testo del consenso nel modulo. Il collegamento attuale punta a una nota provvisoria nel footer, non a un'informativa completa.
 
@@ -50,7 +50,6 @@ Il precedente URL Sites è una bozza indipendente: le modifiche a questa repo no
 
 ## Informazioni ancora da ricevere
 
-- Numero WhatsApp del professionista e testo del primo messaggio, se desiderato.
 - Endpoint Formspree creato dal proprietario.
 - Fotografie e consenso al loro uso.
 - Biografia, formazione, eventuali specializzazioni, sede e prestazioni confermate.

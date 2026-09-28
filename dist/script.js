@@ -1,14 +1,29 @@
 const config = window.SITE_CONFIG || {};
 document.getElementById('year').textContent = new Date().getFullYear();
-document.getElementById('whatsapp-button').addEventListener('click', () => {
-  const number = String(config.whatsappNumber || '').replace(/\D/g, '');
-  if (!number) {
-    document.getElementById('whatsapp-note').textContent = 'Contatto WhatsApp non ancora configurato. Puoi usare il modulo quando sarà attivato.';
-    return;
-  }
-  window.open(`https://wa.me/${number}?text=${encodeURIComponent('Buongiorno Dott. Chiappe, vorrei avere informazioni per una valutazione fisioterapica.')}`, '_blank', 'noopener,noreferrer');
+const whatsappNumber = String(config.whatsappNumber || '').replace(/\D/g, '');
+const whatsappMessage = String(config.whatsappMessage || '');
+const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+document.querySelectorAll('[data-whatsapp]').forEach((link) => {
+  link.href = whatsappUrl;
 });
-document.getElementById('contact-form').addEventListener('submit', async (event) => {
+
+// Mobile keyboards shrink the visual viewport. Hide the fixed CTA while one is
+// open so it never sits over form controls or the submit button.
+if (window.visualViewport) {
+  const setKeyboardState = () => {
+    const keyboardIsOpen = window.visualViewport.height < window.innerHeight * 0.75;
+    document.body.classList.toggle('keyboard-open', keyboardIsOpen);
+  };
+  window.visualViewport.addEventListener('resize', setKeyboardState);
+  setKeyboardState();
+}
+
+const contactForm = document.getElementById('contact-form');
+contactForm.addEventListener('focusin', () => document.body.classList.add('keyboard-open'));
+contactForm.addEventListener('focusout', () => document.body.classList.remove('keyboard-open'));
+
+contactForm.addEventListener('submit', async (event) => {
   event.preventDefault();
   const form = event.currentTarget;
   const status = document.getElementById('form-status');
