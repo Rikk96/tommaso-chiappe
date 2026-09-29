@@ -173,6 +173,7 @@ a:hover>.arrow-icon,a:focus-visible>.arrow-icon,button:hover>.arrow-icon,button:
   .step-list{gap:0;grid-auto-rows:1fr}
   .step-list>div{display:flex;flex-direction:column;padding:18px 0}
   .step-list p{font-size:15px;line-height:1.6;margin-bottom:0}
+  #approccio{padding-bottom:32px}
 }
 
 /* Composizione piu centrale del percorso sui viewport desktop. */
