@@ -176,9 +176,9 @@ a:hover>.arrow-icon,a:focus-visible>.arrow-icon,button:hover>.arrow-icon,button:
   #approccio{padding-bottom:32px}
 }
 
-/* Composizione piu centrale del percorso sui viewport desktop. */
+/* Composizione del percorso sui viewport desktop, allineata al contenitore principale. */
 @media(min-width:1024px){
-  .intro{display:block;max-width:1120px}
+  .intro{display:block}
   .intro>div:first-child{padding-top:0;margin-bottom:24px}
   .intro>div:first-child .eyebrow{margin-bottom:12px}
   .intro .section-number{margin-bottom:0;white-space:nowrap}
