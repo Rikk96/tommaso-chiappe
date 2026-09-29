@@ -175,9 +175,10 @@ a:hover>.arrow-icon,a:focus-visible>.arrow-icon,button:hover>.arrow-icon,button:
 
 /* Composizione piu centrale del percorso sui viewport desktop. */
 @media(min-width:1024px){
-  .intro{max-width:1180px;grid-template-columns:180px minmax(0,1fr);gap:clamp(36px,4vw,58px)}
-  .intro>div:first-child{padding-top:5px}
-  .intro-main{min-width:0}
+  .intro{display:block;max-width:1120px}
+  .intro>div:first-child{padding-top:0;margin-bottom:24px}
+  .intro>div:first-child .eyebrow{margin-bottom:12px}
+  .intro .section-number{margin-bottom:0;white-space:nowrap}
   .intro-main>p{max-width:720px}
   .step-list{gap:clamp(24px,2.5vw,38px)}
 }
