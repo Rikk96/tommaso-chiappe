@@ -131,3 +131,8 @@ a:hover>.arrow-icon,a:focus-visible>.arrow-icon,button:hover>.arrow-icon,button:
   .brand-text small{display:block;font-size:9px}
   .hero{min-height:min(620px,calc(100svh - 74px))}
 }
+
+/* CTA della sezione Contatti nel tono del titolo; barra mobile WhatsApp invariata. */
+.contact .whatsapp-button{background:var(--accent);color:var(--ink)}
+.contact .whatsapp-button:hover{background:#ddeb97}
+.contact .whatsapp-button:focus-visible{background:var(--accent)}
