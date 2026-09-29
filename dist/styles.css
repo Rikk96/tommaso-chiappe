@@ -113,6 +113,7 @@ a:hover>.arrow-icon,a:focus-visible>.arrow-icon,button:hover>.arrow-icon,button:
 .site-header{height:102px}
 .brand{gap:17px}
 .brand-symbol{display:block;width:58px;height:58px;flex:0 0 58px}
+.footer-symbol{display:block;width:64px;height:64px;object-fit:contain;padding:4px;border-radius:50%;background:#f4f5f1}
 .brand-text{font-size:13px}
 .brand-text small{font-size:10px;margin-top:5px}
 @media(max-width:900px){.site-header{height:82px}}
@@ -120,6 +121,7 @@ a:hover>.arrow-icon,a:focus-visible>.arrow-icon,button:hover>.arrow-icon,button:
   .site-header{height:78px}
   .brand{gap:12px}
   .brand-symbol{width:50px;height:50px;flex-basis:50px}
+  .footer-symbol{width:54px;height:54px;padding:3px}
   .brand-text{font-size:12px}
   .brand-text small{font-size:9.5px}
   .hero{min-height:min(620px,calc(100svh - 78px))}
