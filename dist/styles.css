@@ -136,3 +136,4 @@ a:hover>.arrow-icon,a:focus-visible>.arrow-icon,button:hover>.arrow-icon,button:
 .contact .whatsapp-button{background:var(--accent);color:var(--ink)}
 .contact .whatsapp-button:hover{background:#ddeb97}
 .contact .whatsapp-button:focus-visible{background:var(--accent)}
+@media(min-width:641px){.hero .hero-actions .button-accent{background:#25D366}}
