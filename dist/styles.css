@@ -108,3 +108,8 @@ a:hover>.arrow-icon,a:focus-visible>.arrow-icon,button:hover>.arrow-icon,button:
   .hero-actions .button-accent{display:none}
   .hero-actions{gap:0}
 }
+
+/* Simbolo vettoriale e dicitura professionale nell’header. */
+.brand-symbol{display:block;width:52px;height:52px;flex:0 0 52px}
+@media(max-width:640px){.brand-symbol{width:42px;height:42px;flex-basis:42px}}
+@media(max-width:360px){.brand-symbol{width:40px;height:40px;flex-basis:40px}.brand-text small{display:block}}
