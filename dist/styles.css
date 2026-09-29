@@ -201,3 +201,11 @@ a:hover>.arrow-icon,a:focus-visible>.arrow-icon,button:hover>.arrow-icon,button:
 @media(min-width:1024px) and (max-width:1199px){
   .form-panel{padding:40px}
 }
+
+/* Il ruolo nella sezione Chi sono resta su una riga; a 320 px usa la forma breve. */
+.about-role{white-space:nowrap}
+.about-role-compact{display:none}
+@media(max-width:320px){
+  .about-role-wide{display:none}
+  .about-role-compact{display:inline}
+}
