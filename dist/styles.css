@@ -172,3 +172,29 @@ a:hover>.arrow-icon,a:focus-visible>.arrow-icon,button:hover>.arrow-icon,button:
   .step-list strong{font-size:18px;line-height:1.4;margin-bottom:7px}
   .step-list p{font-size:15px;line-height:1.6;margin-bottom:13px}
 }
+
+/* Composizione piu centrale del percorso sui viewport desktop. */
+@media(min-width:1024px){
+  .intro{display:block;max-width:1120px}
+  .intro>div:first-child{padding-top:0;margin-bottom:24px}
+  .intro>div:first-child .eyebrow{margin-bottom:12px}
+  .intro .section-number{margin-bottom:0;white-space:nowrap}
+  .intro-main>p{max-width:720px}
+  .step-list{gap:clamp(24px,2.5vw,38px)}
+}
+
+/* Tra tablet e desktop il percorso e i contatti restano ariosi, senza colonne compresse. */
+@media(min-width:901px) and (max-width:1023px){
+  .intro{grid-template-columns:1fr;gap:22px}
+  .contact-grid{grid-template-columns:1fr;gap:48px}
+  .contact-whatsapp{padding-top:0}
+}
+
+/* Ritocchi proporzionali ai contatti desktop. */
+@media(min-width:1024px){
+  .contact-grid{grid-template-columns:minmax(340px,.85fr) minmax(480px,1.15fr);gap:clamp(56px,6vw,92px)}
+}
+
+@media(min-width:1024px) and (max-width:1199px){
+  .form-panel{padding:40px}
+}
