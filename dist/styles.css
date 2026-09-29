@@ -140,26 +140,20 @@ a:hover>.arrow-icon,a:focus-visible>.arrow-icon,button:hover>.arrow-icon,button:
 
 /* Fascia editoriale dedicata alla formazione OMPT. */
 .ompt{padding-top:84px;padding-bottom:84px;background:#e7ece7}
-.ompt-layout{display:grid;grid-template-columns:minmax(300px,.9fr) minmax(0,1.1fr);gap:clamp(56px,8vw,130px);align-items:center}
-.ompt-mark{font-family:Manrope,sans-serif;font-size:clamp(96px,12vw,180px);font-weight:800;line-height:.78;letter-spacing:-.09em;color:#d0dad3}
-.ompt-copy{max-width:690px;padding-left:clamp(28px,4vw,64px);border-left:1px solid #b5c5bd}
-.ompt-copy .eyebrow{margin-bottom:18px}
-.ompt-copy h2{font-size:clamp(40px,4vw,62px);line-height:1.08;font-weight:600;margin-bottom:24px}
+.ompt-copy{display:grid;grid-template-columns:minmax(280px,.85fr) minmax(0,1.15fr);column-gap:clamp(56px,8vw,130px);align-items:start}
+.ompt-copy .eyebrow{grid-column:1/-1;margin-bottom:25px}
+.ompt-copy h2{font-size:clamp(40px,4vw,62px);line-height:1.08;font-weight:600;margin-bottom:0}
 .ompt-copy h2 em{font-style:normal;color:#568084}
-.ompt-description{font-size:18px;line-height:1.72;color:#4f6164;margin-bottom:25px}
-.ompt-training{border-top:1px solid #b5c5bd;padding-top:18px;margin-bottom:0;font-family:Manrope,sans-serif;font-size:14px;font-weight:700;letter-spacing:-.01em;color:#315557}
+.ompt-description{max-width:660px;font-size:18px;line-height:1.72;color:#4f6164;margin:4px 0 0}
 
 @media(max-width:900px){
-  .ompt-layout{grid-template-columns:minmax(220px,.7fr) minmax(0,1.3fr);gap:40px}
-  .ompt-copy{padding-left:36px}
+  .ompt-copy{grid-template-columns:minmax(245px,.8fr) minmax(0,1.2fr);column-gap:40px}
 }
 
 @media(max-width:640px){
   .ompt{padding-top:58px;padding-bottom:58px}
-  .ompt-layout{grid-template-columns:1fr;gap:37px}
-  .ompt-mark{font-size:clamp(86px,30vw,128px);line-height:.75}
-  .ompt-copy{padding-left:0;border-left:0}
+  .ompt-copy{display:block}
+  .ompt-copy .eyebrow{margin-bottom:19px}
   .ompt-copy h2{font-size:clamp(38px,10.5vw,50px);margin-bottom:20px}
-  .ompt-description{font-size:17px;line-height:1.65;margin-bottom:23px}
-  .ompt-training{padding-top:16px;line-height:1.55}
+  .ompt-description{font-size:17px;line-height:1.65;margin:0}
 }
