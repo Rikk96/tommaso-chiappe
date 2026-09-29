@@ -144,22 +144,32 @@ a:hover>.arrow-icon,a:focus-visible>.arrow-icon,button:hover>.arrow-icon,button:
 
 /* Fascia editoriale dedicata alla formazione OMPT. */
 .ompt{padding-top:84px;padding-bottom:84px;background:#e7ece7}
-.ompt-copy{display:grid;grid-template-columns:minmax(280px,.85fr) minmax(0,1.15fr);column-gap:clamp(56px,8vw,130px);align-items:start}
-.ompt-copy .eyebrow{grid-column:1/-1;margin-bottom:25px}
-.ompt-copy h2{font-size:clamp(40px,4vw,62px);line-height:1.08;font-weight:600;margin-bottom:0}
+.ompt-layout{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(360px,.88fr);gap:clamp(48px,7vw,104px);align-items:center}
+.ompt-copy .eyebrow{margin-bottom:25px}
+.ompt-copy h2{font-size:clamp(40px,4vw,62px);line-height:1.08;font-weight:600;margin-bottom:25px}
 .ompt-copy h2 em{font-style:normal;color:#568084}
-.ompt-description{max-width:660px;font-size:18px;line-height:1.72;color:#4f6164;margin:4px 0 0}
+.ompt-description{max-width:680px;font-size:18px;line-height:1.72;color:#4f6164;margin:0}
+.ompt-path{max-width:680px;border-top:1px solid #b8c7c0;margin-top:28px;padding-top:22px}
+.ompt-path h3{font-size:20px;line-height:1.35;letter-spacing:-.025em;margin-bottom:9px}
+.ompt-path p{font-size:16px;line-height:1.65;color:#4f6164;margin:0}
+.ompt-path strong{color:var(--ink);font-weight:700}
+.ompt-image{height:clamp(300px,30vw,410px);overflow:hidden;background:#d3dbd5}
+.ompt-image img{width:100%;height:100%;object-fit:cover;object-position:52% center}
 
 @media(max-width:900px){
-  .ompt-copy{grid-template-columns:minmax(245px,.8fr) minmax(0,1.2fr);column-gap:40px}
+  .ompt-layout{grid-template-columns:1fr;gap:36px;align-items:start}
+  .ompt-image{height:auto;aspect-ratio:874/580}
 }
 
 @media(max-width:640px){
   .ompt{padding-top:58px;padding-bottom:58px}
-  .ompt-copy{display:block}
   .ompt-copy .eyebrow{margin-bottom:19px}
   .ompt-copy h2{font-size:clamp(38px,10.5vw,50px);margin-bottom:20px}
   .ompt-description{font-size:17px;line-height:1.65;margin:0}
+  .ompt-path{margin-top:24px;padding-top:19px}
+  .ompt-path h3{font-size:19px;margin-bottom:8px}
+  .ompt-path p{font-size:16px;line-height:1.6}
+  .ompt-layout{gap:28px}
 }
 
 /* Leggibilita dei tre passaggi nella sezione Il percorso. */
