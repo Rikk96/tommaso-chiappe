@@ -65,7 +65,7 @@ input:not([type=checkbox]),textarea{min-height:49px;margin-top:7px}
   .step-list>div{padding-top:15px}
   .step-list strong{font-size:16px}
   .services-top{margin-bottom:24px}
-  .service-card,.service-card+article{padding:24px 0}
+  .service-card,.service-card+article{min-height:auto;padding:24px 0}
   .service-no{font-size:24px;margin:0 0 20px}
   .service-card h3{font-size:22px}
   .about{gap:34px}
