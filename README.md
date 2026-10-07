@@ -19,7 +19,11 @@ Il sito è statico, senza framework, dipendenze da installare o procedura di bui
 
 | File | Funzione |
 | --- | --- |
-| `dist/index.html` | Contenuti e struttura della pagina |
+| `dist/index.html` | Home e sezione contatti |
+| `dist/chi-sono.html` | Formazione, esperienza e approccio del professionista |
+| `dist/trattamenti.html` | Cinque ambiti di trattamento |
+| `dist/navigation.css` | Header e menu responsive condivisi |
+| `dist/pages.css` | Layout delle due pagine interne |
 | `dist/styles.css` | Stile e layout responsive |
 | `dist/script.js` | Interazioni, invio del modulo e apertura WhatsApp |
 | `dist/config.js` | Numero WhatsApp, messaggio iniziale ed endpoint Formspree |
@@ -65,3 +69,7 @@ Il precedente URL Sites è una bozza indipendente: le modifiche a questa repo no
 - Materiali approvati per sostituire le immagini campione e relativi consensi.
 - Revisione della biografia e conferma di eventuali nuove informazioni su formazione, sede e prestazioni.
 - Informativa privacy e dati professionali da riportare nel footer.
+
+## Navigazione
+
+L’header condiviso collega Chi sono, Trattamenti e Contatti (`./index.html#contatti`). Sotto i 900 px il menu è una disclosure con hamburger a destra: si chiude tramite Escape, scelta di un link, clic o focus esterno. Le pagine interne riutilizzano font, palette, logo, footer e configurazione WhatsApp della home. La formazione e il ruolo nella Fiorentina Under 16 provengono dal testo fornito dal proprietario.

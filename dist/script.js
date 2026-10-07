@@ -1,5 +1,6 @@
 const config = window.SITE_CONFIG || {};
-document.getElementById('year').textContent = new Date().getFullYear();
+const year = document.getElementById('year');
+if (year) year.textContent = new Date().getFullYear();
 const whatsappNumber = String(config.whatsappNumber || '').replace(/\D/g, '');
 const whatsappMessage = String(config.whatsappMessage || '');
 const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
@@ -20,10 +21,10 @@ if (window.visualViewport) {
 }
 
 const contactForm = document.getElementById('contact-form');
-contactForm.addEventListener('focusin', () => document.body.classList.add('keyboard-open'));
-contactForm.addEventListener('focusout', () => document.body.classList.remove('keyboard-open'));
+contactForm?.addEventListener('focusin', () => document.body.classList.add('keyboard-open'));
+contactForm?.addEventListener('focusout', () => document.body.classList.remove('keyboard-open'));
 
-contactForm.addEventListener('submit', async (event) => {
+contactForm?.addEventListener('submit', async (event) => {
   event.preventDefault();
   const form = event.currentTarget;
   const status = document.getElementById('form-status');
@@ -46,3 +47,36 @@ contactForm.addEventListener('submit', async (event) => {
     button.disabled = false;
   }
 });
+
+
+// A disclosure menu: hidden links cannot receive focus while it is closed.
+const menuToggle = document.querySelector('.menu-toggle');
+const navigation = document.getElementById('site-navigation');
+const mobileNavigation = window.matchMedia('(max-width: 900px)');
+if (menuToggle && navigation) {
+  const closeMenu = (restoreFocus = false) => {
+    menuToggle.setAttribute('aria-expanded', 'false');
+    menuToggle.setAttribute('aria-label', 'Apri il menu di navigazione');
+    navigation.classList.remove('is-open');
+    if (restoreFocus) menuToggle.focus();
+  };
+  menuToggle.addEventListener('click', () => {
+    const open = menuToggle.getAttribute('aria-expanded') !== 'true';
+    menuToggle.setAttribute('aria-expanded', String(open));
+    menuToggle.setAttribute('aria-label', open ? 'Chiudi il menu di navigazione' : 'Apri il menu di navigazione');
+    navigation.classList.toggle('is-open', open);
+  });
+  navigation.addEventListener('click', (event) => {
+    if (event.target.closest('a')) closeMenu();
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && menuToggle.getAttribute('aria-expanded') === 'true') closeMenu(true);
+  });
+  document.addEventListener('click', (event) => {
+    if (!event.target.closest('.site-header')) closeMenu();
+  });
+  document.addEventListener('focusin', (event) => {
+    if (!event.target.closest('.site-header')) closeMenu();
+  });
+  mobileNavigation.addEventListener('change', () => closeMenu());
+}
