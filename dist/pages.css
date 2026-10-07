@@ -41,8 +41,8 @@
 .treatments-hero h1{font-size:clamp(46px,4.7vw,70px)}
 .treatments-hero .page-lead{font-size:20px;color:#f2f6ff;margin-bottom:18px}
 .treatments-intro{font-size:16px;color:#e4edff;max-width:530px;margin-bottom:30px;line-height:1.75}
-.assessment-photo{margin:0;position:relative}
-.assessment-photo img{width:100%;height:auto;aspect-ratio:1.12;object-fit:cover;object-position:52% center}
+.assessment-photo{margin:0;position:relative;width:100%;max-width:440px;justify-self:center;background:#fff}
+.assessment-photo img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:contain}
 .assessment-photo figcaption{padding:17px 20px;background:var(--accent);color:var(--ink);font-size:13px;font-weight:700;line-height:1.55}
 .treatment-row{display:grid;grid-template-columns:60px minmax(0,.95fr) minmax(0,1.05fr);gap:32px;border-top:1px solid #bfcac6;padding:34px 0;align-items:start}
 .treatment-row:last-child{border-bottom:1px solid #bfcac6}
@@ -63,8 +63,7 @@
  .story-copy{padding-top:0}
  .method-grid{gap:24px}
  .method-grid h3{font-size:22px}
- .assessment-photo{max-width:620px}
- .assessment-photo img{aspect-ratio:874/580}
+ .assessment-photo{max-width:380px}
  .page-contact-grid{grid-template-columns:1fr;gap:32px}
  .page-contact-actions{justify-self:start}
  .treatment-row{grid-template-columns:42px minmax(0,1fr);gap:16px 22px}
