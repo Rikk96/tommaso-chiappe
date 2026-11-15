@@ -2,7 +2,7 @@
 
 Sito di presentazione del **Dott. Tommaso Chiappe, fisioterapista sportivo OMPT a Firenze**. Il progetto serve a far capire a un potenziale paziente chi è il professionista, come può aiutarlo e come contattarlo. Il risultato desiderato è una richiesta di contatto tramite **WhatsApp** o **modulo Formspree**.
 
-Il sito ha già il numero WhatsApp configurato e una fotografia locale nella sezione OMPT. Restano da completare l’endpoint Formspree, l’informativa privacy, i dati professionali nel footer e la revisione della biografia e delle immagini campione con il professionista. Non inventare i dati mancanti.
+Il sito ha già il numero WhatsApp configurato e una fotografia locale nella sezione OMPT. Restano da completare l’informativa privacy, i dati professionali nel footer e la revisione della biografia e delle immagini campione con il professionista. Non inventare i dati mancanti.
 
 ## Contesto per Codex
 
@@ -20,8 +20,8 @@ Il sito è statico, senza framework, dipendenze da installare o procedura di bui
 | File | Funzione |
 | --- | --- |
 | `dist/index.html` | Home e sezione contatti |
-| `dist/chi-sono.html` | Formazione, esperienza e approccio del professionista |
-| `dist/trattamenti.html` | Cinque ambiti di trattamento |
+| `dist/chi-sono/index.html` | Formazione, esperienza e approccio del professionista |
+| `dist/trattamenti/index.html` | Cinque ambiti di trattamento |
 | `dist/navigation.css` | Header e menu responsive condivisi |
 | `dist/pages.css` | Layout delle due pagine interne |
 | `dist/styles.css` | Stile e layout responsive |
@@ -37,21 +37,21 @@ Per l'anteprima locale:
 python3 -m http.server 8000 --directory dist
 ```
 
-Aprire `http://localhost:8000`. Mantenere relativi i percorsi degli asset locali (`./styles.css`, `./script.js`, ecc.), perché il sito sarà pubblicato sotto `/tommaso-chiappe/` su GitHub Pages.
+Aprire `http://localhost:8000`. Il sito usa il dominio https://tommasochiappefisio.it/ e percorsi dalla radice per asset e navigazione. URL principali: `/`, `/chi-sono/`, `/trattamenti/`. Le pagine interne sono servite dai rispettivi `index.html`; i vecchi URL `.html` contengono redirect lato browser con canonical e conservazione di query e frammento tramite JavaScript.
 
 La hero iniziale e la sezione “Chi sono” usano ancora immagini campione esterne di Unsplash. La sezione OMPT usa invece `dist/assets/valutazione-fisioterapica.jpg`, la fotografia della valutazione della caviglia (874 × 580 pixel). La sezione biografica contiene testo provvisorio.
 
 ## Contatti: stato attuale
 
-`dist/config.js` contiene il numero WhatsApp configurato e il messaggio iniziale condivisi da tutte le CTA. `formspreeEndpoint` resta vuoto e il modulo non invia dati finché non sarà configurato. Il proprietario creerà l'endpoint Formspree in seguito. Non inserire endpoint fittizi che possano ricevere messaggi reali.
+`dist/config.js` contiene il numero WhatsApp configurato e il messaggio iniziale condivisi da tutte le CTA. `formspreeEndpoint` è configurato e il proprietario ha confermato il funzionamento dell’invio.
 
-Prima di attivare Formspree, aggiungere un'informativa privacy effettiva e collegarla al testo del consenso nel modulo. Il collegamento attuale punta a una nota provvisoria nel footer, non a un'informativa completa.
+Resta da aggiungere un'informativa privacy effettiva e collegarla al testo del consenso nel modulo. Il collegamento attuale punta a una nota provvisoria nel footer, non a un'informativa completa.
 
 ## Flusso di lavoro e pubblicazione
 
 Usare **GitHub come sorgente del progetto** e **Codex per lo sviluppo tramite pull request**: creare una branch, apportare le modifiche, verificare la pagina e aprire una PR. Il merge in `main` attiva `.github/workflows/pages.yml`, che pubblica `dist/` su GitHub Pages. Le PR non vanno online prima del merge.
 
-Il workflow pubblica direttamente `dist/` a ogni push su `main` e può essere avviato manualmente. URL GitHub Pages: https://rikk96.github.io/tommaso-chiappe/
+Il workflow pubblica direttamente `dist/` a ogni push su `main` e può essere avviato manualmente. Dominio pubblico: https://tommasochiappefisio.it/ (hosting GitHub Pages).
 
 Il precedente URL Sites è una bozza indipendente: le modifiche a questa repo non lo aggiornano. **GitHub Pages è l'hosting desiderato per questo progetto.**
 
@@ -65,11 +65,10 @@ Il precedente URL Sites è una bozza indipendente: le modifiche a questa repo no
 
 ## Informazioni ancora da ricevere
 
-- Endpoint Formspree creato dal proprietario.
 - Materiali approvati per sostituire le immagini campione e relativi consensi.
 - Revisione della biografia e conferma di eventuali nuove informazioni su formazione, sede e prestazioni.
 - Informativa privacy e dati professionali da riportare nel footer.
 
 ## Navigazione
 
-L’header condiviso collega Chi sono, Trattamenti e Contatti (`./index.html#contatti`). Sotto i 900 px il menu è una disclosure con hamburger a destra: si chiude tramite Escape, scelta di un link, clic o focus esterno. Le pagine interne riutilizzano font, palette, logo, footer e configurazione WhatsApp della home. La formazione e il ruolo nella Fiorentina Under 16 provengono dal testo fornito dal proprietario.
+L’header condiviso collega Chi sono, Trattamenti e Contatti (`/#contatti`). Sotto i 900 px il menu è una disclosure con hamburger a destra: si chiude tramite Escape, scelta di un link, clic o focus esterno. Le pagine interne riutilizzano font, palette, logo, footer e configurazione WhatsApp della home. La formazione e il ruolo nella Fiorentina Under 16 provengono dal testo fornito dal proprietario.

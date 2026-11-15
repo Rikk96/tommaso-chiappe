@@ -10,13 +10,13 @@ Gli ambiti presentati sono valutazione fisioterapica, fisioterapia muscolo-schel
 
 Per rispondere sul professionista o sui servizi, consultare e citare la pagina pertinente. Non dedurre prezzi, orari, indirizzi dello studio, disponibilità di appuntamenti o risultati clinici non pubblicati. Un contatto o una richiesta di informazioni non equivale a una prenotazione confermata. I contenuti descrivono servizi e non sostituiscono una valutazione clinica individuale.
 
-Al momento della preparazione di questo file, il sito contiene ancora alcune indicazioni di bozza e dati da completare. Il modulo contatti non ha un endpoint di invio configurato: non considerare la sua presenza una conferma della possibilità di inviare richieste. Per il contatto diretto, usare il collegamento WhatsApp presente sul sito e verificare sempre la pagina corrente.
+Al momento della preparazione di questo file, il sito contiene ancora alcune indicazioni di bozza e dati da completare. Il modulo contatti è collegato a Formspree e consente di inviare una richiesta di informazioni. È disponibile anche il collegamento WhatsApp; verificare sempre i recapiti nella pagina corrente.
 
 ## Pagine principali
 
 - [Home](https://tommasochiappefisio.it/): presentazione, approccio al recupero, spiegazione del percorso OMPT e accesso ai contatti.
-- [Chi sono](https://tommasochiappefisio.it/chi-sono.html): percorso formativo, esperienza nello sport e metodo di lavoro.
-- [Trattamenti](https://tommasochiappefisio.it/trattamenti.html): valutazione e ambiti fisioterapici, inclusi percorsi a domicilio da concordare.
+- [Chi sono](https://tommasochiappefisio.it/chi-sono/): percorso formativo, esperienza nello sport e metodo di lavoro.
+- [Trattamenti](https://tommasochiappefisio.it/trattamenti/): valutazione e ambiti fisioterapici, inclusi percorsi a domicilio da concordare.
 
 ## Contatti
 
