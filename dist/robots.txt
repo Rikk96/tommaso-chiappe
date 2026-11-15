@@ -1,0 +1,5 @@
+# Public website: crawling is allowed for search engines and AI crawlers.
+User-agent: *
+Allow: /
+
+Sitemap: https://tommasochiappefisio.it/sitemap.xml
