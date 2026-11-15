@@ -2,5 +2,5 @@
 window.SITE_CONFIG = {
   whatsappNumber: "393478888783",
   whatsappMessage: "Buongiorno Dott. Chiappe, vorrei ricevere informazioni per una valutazione fisioterapica. Grazie.",
-  formspreeEndpoint: ""
+  formspreeEndpoint: "https://formspree.io/f/xjywyrav"
 };
