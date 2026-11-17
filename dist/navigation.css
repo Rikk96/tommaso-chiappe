@@ -16,3 +16,10 @@
 }
 @media(max-width:360px){.site-header .menu-toggle{flex-basis:40px;width:40px;height:40px}}
 @media(prefers-reduced-motion:reduce){.menu-toggle span{transition:none}}
+
+/* Percorso visibile coerente con i BreadcrumbList delle pagine interne. */
+.breadcrumbs{margin:0 0 22px;font-size:13px;line-height:1.5}
+.breadcrumbs ol{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0;padding:0}
+.breadcrumbs li+li::before{content:"/";margin-right:8px;opacity:.65}
+.breadcrumbs a{text-decoration:underline;text-underline-offset:3px}
+.breadcrumbs [aria-current="page"]{font-weight:600}
